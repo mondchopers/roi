@@ -66,61 +66,137 @@ buildingDict = {
                 # Basic : Gatherers
                 'Coal Mine'             : [0, 
                                            [['Coal', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Copper Mine'           : [1, 
                                            [['Copper', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Fisherman Pier'        : [2, 
-                                           [['CoFishpper', 10, 1]],
-                                           [],
+                                           [['Fish', 10, 1]],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Gas Pump'              : [3, 
                                            [['Gas', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Iron Mine'             : [4, 
                                            [['Iron', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Lumberyard'            : [5, 
                                            [['Wood', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Offshore Oil Drill'    : [6, 
                                            [['Oil', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Oil Drill'             : [7, 
                                            [['Oil', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Sand Collector'        : [8, 
                                            [['Sand', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 'Water Siphon'          : [9, 
                                            [['Water', 10, 1]],
-                                           [],
+                                           [[]],
                                            "Gatherer"
                                           ],
                 # Basic : Farms
-                'Crop Farm'             : 10,
-                'Livestock Farm'        : 11,
-                'Orchard'               : 12,
-                'Plantation'            : 13,
-                # Factory: Rural
-                'Food Factory'          : 14,
-                'Preservation Factory'  : 15,
-                'Drinks Factory'        : 16,
+                'Crop Farm Hops'        : [10, 
+                                           [['Hops', 45, 2]],
+                                           [['Water', 45, 1]],
+                                           "Farm"
+                                          ],
+                'Crop Farm Potato'      : [11, 
+                                           [['Potato', 45, 2]],
+                                           [['Water', 45, 1]],
+                                           "Farm"
+                                          ],
+                'Crop Farm Vegetables'  : [12, 
+                                           [['Vegetables', 45, 2]],
+                                           [['Water', 45, 1]],
+                                           "Farm"
+                                          ],
+                'Crop Farm Wheat'       : [13, 
+                                           [['Wheat', 45, 2]],
+                                           [['Water', 45, 1]],
+                                           "Farm"
+                                          ],
+                'Livestock Farm Cow'    : [14, 
+                                           [['Beef', 45, 1], ['Milk', 45, 1], ['Leather', 45, 1]],
+                                           [['Water', 45, 1], ['Wheat', 45, 2]],
+                                           "Farm"
+                                          ],
+                'Livestock Farm Chicken': [15, 
+                                           [['Chicken', 30, 1], ['Eggs', 30, 2]],
+                                           [['Water', 30, 1], ['Wheat', 30, 1]],
+                                           "Farm"
+                                          ],
+                'Livestock Farm Sheep'  : [16, 
+                                           [['Mutton', 30, 1], ['Wool', 30, 2]],
+                                           [['Water', 30, 1], ['Wheat', 30, 1]],
+                                           "Farm"
+                                          ],
+                'Orchard Apples'        : [17, 
+                                           [['Apples', 35, 2]],
+                                           [['Water', 35, 1]],
+                                           "Farm"
+                                          ],
+                'Orchard Grapes'        : [18, 
+                                           [['Grapes', 35, 2]],
+                                           [['Water', 35, 1]],
+                                           "Farm"
+                                          ],
+                'Orchard Olives'        : [19, 
+                                           [['Olives', 35, 2]],
+                                           [['Water', 35, 1]],
+                                           "Farm"
+                                          ],
+                'Orchard Oranges'       : [20, 
+                                           [['Oranges', 35, 2]],
+                                           [['Water', 35, 1]],
+                                           "Farm"
+                                          ],
+                'Orchard Rubber'        : [21, 
+                                           [['Raw Rubber', 35, 2]],
+                                           [['Water', 35, 1]],
+                                           "Farm"
+                                          ],
+                'Plantation Berries'    : [22, 
+                                           [['Berries', 30, 2]],
+                                           [['Water', 30, 1]],
+                                           "Farm"
+                                          ],
+                'Plantation Cocoa'      : [23, 
+                                           [['Cocoa', 30, 2]],
+                                           [['Water', 30, 1]],
+                                           "Farm"
+                                          ],
+                'Plantation Cotton'     : [24, 
+                                           [['Cotton', 30, 2]],
+                                           [['Water', 30, 1]],
+                                           "Farm"
+                                          ],
+                'Plantation Sugar'      : [25, 
+                                           [['Sugar', 30, 2]],
+                                           [['Water', 30, 1]],
+                                           "Farm"
+                                          ],
+                # # Factory: Rural
+                # 'Food Factory'          : 14,
+                # 'Preservation Factory'  : 15,
+                # 'Drinks Factory'        : 16,
                 }

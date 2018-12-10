@@ -1,5 +1,5 @@
 import itemkey as itk
-
+import numpy as np
 
 """ 
     Main library with static definitions of item consumptions according to recipe
@@ -39,6 +39,41 @@ class cCompany:
         Class to encapsulate a company production assets
     """
 
+    def __init__(self, cBuildingList=[]):
+        """ 
+        Creates a company object with building list as asset
+        """
+        self.assets = cBuildingList
+        self.calculated = False
 
-x = cBuilding('Water 1', 'Water Siphon', 3, 0.333)
-x.describe()
+    def calculate_input_output(self):
+        """ 
+        Calculates the array of input/output as number of items required/produced
+        every 15 days
+        """
+        prodInp = [0] * len(itk.itemDict)
+        prodOut = [0] * len(itk.itemDict)
+        for building in self.assets:
+            mult = building.fields * building.efficiency
+            for item in building.input:
+                if len(item) == 0:
+                    continue
+                prodInp[itk.itemDict[item[0]]] += mult * item[2] * 15 / item[1]
+            for item in building.output:
+                if len(item) == 0:
+                    continue
+                prodOut[itk.itemDict[item[0]]] += mult * item[2] * 15 / item[1]
+        
+        self.totalInp = prodInp
+        self.totalOut = prodOut
+        self.calculated = True
+
+    def print_net_production(self):
+        if not self.calculated:
+            self.calculate_input_output()
+        labelmap = {v:k for k, v in itk.itemDict.items()}
+        netprod = np.array(self.totalInp) - np.array(self.totalOut)
+        for i in range(len(itk.itemDict)):
+            if netprod[i] != 0:
+                print("{0:7.2f}".format(netprod[i]), labelmap[i])
+
