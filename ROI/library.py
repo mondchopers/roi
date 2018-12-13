@@ -72,7 +72,7 @@ class cCompany:
         if not self.calculated:
             self.calculate_input_output()
         labelmap = {v:k for k, v in itk.itemDict.items()}
-        netprod = np.array(self.totalInp) - np.array(self.totalOut)
+        netprod = np.array(self.totalOut) - np.array(self.totalInp)
         for i in range(len(itk.itemDict)):
             if netprod[i] != 0:
                 print("{0:7.2f}".format(netprod[i]), labelmap[i])
